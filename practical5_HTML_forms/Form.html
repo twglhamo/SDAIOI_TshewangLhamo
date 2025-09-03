@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Maintenance Request Form</title>
+</head>
+<body>
+    
+</body>
+</html>
+<form action="/submit-form" method="post">
+</form>
+
+<form action="/submit-form" method="post">
+  <h2>Hostel Maintenance Request Form</h2>
+  <label for="fullname">Full Name:</label>
+  <input type="text" id="fullname" name="fullname" required><br><br>
+  
+  <label for="student id">Student Id:</label>
+  <input type="student id" id="student id" name="student id" required><br><br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" required><br><br>
+
+  <p>Room Information Selection:</p>
+    <label for="block">Building Name:</label>
+  <select id="block" name="block">
+    <option value="block A">Block A</option>
+    <option value="block B">Block B</option>
+    <option value="block C">Block C</option>
+    <option value="block D">Block D</option>
+    <option value="block E">Block E</option>
+    <option value="block F">Block F</option>
+    <option value="block NK">NK</option>
+    <option value="block RK">RK</option>
+  </select><br><br>
+<!-- number input for room number -->
+     <!-- 'required' attribute, 100-999 -->
+  <label for="room number">Room Number:</label>
+  <input type="number" id="room number" name="room number" min="100" max="999" required><br><br>
+
+  <!-- number input for floor number -->
+     <!-- 'required' attribute, 1-10 -->
+  <label for="floor number">Floor Number:</label>
+  <input type="number" id="floor number" name="floor number" min="1" max="10" required><br><br>
+
+    <label for="issue type">Type of Issue:</label>
+    <select id="issue type" name="issue type"> 
+        <option value="plumbing">Plumbing</option>
+        <option value="electrical">Electrical</option>
+        <option value="furniture">Furniture</option>
+        <option value="cleaning">Cleaning</option>
+        <option value="other">Other</option>
+    </select><br><br>
+
+    <!-- Radio buttons for Issue priority -->
+  <p>Issue Priority:</p>
+    <input type="radio" id="emergency" name="priority" value="Ememgency" checked>
+    <label for="emergency">Emergency</label><br>
+    <input type="radio" id="high" name="priority" value="high">
+    <label for="high">High</label><br>
+    <input type="radio" id="medium" name="priority" value="medium">
+    <label for="medium">Medium</label>
+    <input type="radio" id="low" name="priority" value="low">
+    <label for="low">Low</label><br><br>
+
+    <label for="issue description">Description of The Issue:</label><br>
+    <textarea id="issue description" name="issue description" rows="5" cols="50" min="20" max="500" required></textarea><br><br>
+    <input type="submit" value="Submit Request">
