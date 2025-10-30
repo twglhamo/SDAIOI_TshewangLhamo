@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Validation Form</title>
+<style>
+body{font-family:"Times New Roman",serif;max-width:400px;margin:40px auto}
+h2{text-align:center}
+label{display:block;margin-top:10px;font-weight:bold}
+input{width:100%;padding:8px;border:2px solid #ccc;border-radius:4px;margin-top:4px}
+input.valid{border-color:green}input.invalid{border-color:red}
+small{color:red;font-size:.9em;height:14px;display:block}
+button{margin-top:12px;width:100%;padding:8px}
+button:disabled{background:#ccc;cursor:not-allowed}
+</style>
+</head>
+<body>
+<h2>Validation Form</h2>
+<form id="registerForm" novalidate>
+  <label>Username</label><input id="username" type="text"><small></small>
+  <label>Email</label><input id="email" type="email"><small></small>
+  <label>Password</label><input id="password" type="password"><small></small>
+  <label>Confirm Password</label><input id="confirmPassword" type="password"><small></small>
+  <button type="submit" disabled>Register</button>
+</form>
+
+<script>
+const f=document.getElementById("registerForm"),btn=f.querySelector("button")
+const username=f.username,email=f.email,password=f.password,confirmPassword=f.confirmPassword
+const usernameError=username.nextElementSibling,emailError=email.nextElementSibling,passwordError=password.nextElementSibling,confirmPasswordError=confirmPassword.nextElementSibling  
+function validateUsername(){
+  const value=username.value.trim()
+  if(value.length<3){username.classList.add("invalid");username.classList.remove("valid");usernameError.textContent="Username must be at least 3 characters";return false}
+  username.classList.add("valid");username.classList.remove("invalid");usernameError.textContent="";return true
+}
+
+ 
